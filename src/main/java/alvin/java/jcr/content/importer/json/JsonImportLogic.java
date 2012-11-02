@@ -16,6 +16,7 @@ import org.joda.time.format.DateTimeFormatter;
 
 import alvin.java.jcr.content.importer.ImportRuntimeException;
 import alvin.java.jcr.content.importer.JcrStringLikeTypes;
+import alvin.java.jcr.content.importer.RootPathNotFoundException;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
@@ -60,9 +61,7 @@ class JsonImportLogic {
 		if (session.nodeExists(rootPath)) {
 			root = session.getNode(rootPath);
 		} else {
-			Node jcrRoot = session.getRootNode();
-			String normalizedNodePath = rootPath.startsWith("/") ? rootPath.substring(1) : rootPath;
-			root = jcrRoot.addNode(normalizedNodePath);
+			throw new RootPathNotFoundException("Root node does not exist");
 		}
 		
 		handleObject(root, json);
@@ -127,10 +126,28 @@ class JsonImportLogic {
 			case PATH:
 				setPathProperty(root, tuple.name, val);
 				break;
+			case REFERENCE:
+				setReferenceProperty(root, tuple.name, val);
+				break;
+			case NAME:
+				setNameProperty(root, tuple.name, val);
+				break;
 			default:
 				throw new ImportRuntimeException("Unsupport type: " + tuple.type);
 		}
 		
+	}
+
+	private void setNameProperty(Node root, String name, String val)
+	throws RepositoryException {
+		
+		root.setProperty(name, val, PropertyType.NAME);
+	}
+
+	private void setReferenceProperty(Node root, String name, String val)
+	throws RepositoryException {
+		
+		root.setProperty(name, val, PropertyType.REFERENCE);
 	}
 
 	private void setPathProperty(Node root, String name, String val)

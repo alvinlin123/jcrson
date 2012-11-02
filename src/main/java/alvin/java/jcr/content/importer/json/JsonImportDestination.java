@@ -38,8 +38,22 @@ class JsonImportDestination implements ImportDestination, ImportConfigs {
 	}
 
 	@Override
-	public ImportConfigs withConcifgs() {
+	public ImportConfigs withConfigs() {
 		
 		return this;
 	}
+	
+	@Override
+	public ImportDestination doneConfigs() {
+		
+		return this;
+	}
+
+	@Override
+	public ImportConfigs importMode(String mode) {
+		
+		throw new UnsupportedOperationException("This configuration is not implemented yet");
+	}
+	
+	
 }

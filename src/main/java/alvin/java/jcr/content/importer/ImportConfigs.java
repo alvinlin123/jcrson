@@ -1,6 +1,9 @@
 package alvin.java.jcr.content.importer;
 
-public interface ImportConfigs extends ImportDestination {
+public interface ImportConfigs  {
 
 	public ImportConfigs importRoot(String path);
+	public ImportConfigs importMode(String mode);
+	
+	public ImportDestination doneConfigs();
 }
