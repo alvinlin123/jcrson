@@ -1,4 +1,4 @@
-package com.ea.origin.cq5.content.importer.json;
+package alvin.java.jcr.content.importer.json;
 
 import java.util.Calendar;
 import java.util.Map;
@@ -14,8 +14,9 @@ import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import com.ea.origin.cq5.content.importer.ImportRuntimeException;
-import com.ea.origin.cq5.content.importer.JcrStringLikeTypes;
+import alvin.java.jcr.content.importer.ImportRuntimeException;
+import alvin.java.jcr.content.importer.JcrStringLikeTypes;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;

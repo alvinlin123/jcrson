@@ -1,10 +1,11 @@
-package com.ea.origin.cq5.content.importer.json;
+package alvin.java.jcr.content.importer.json;
 
 import javax.jcr.Session;
 
-import com.ea.origin.cq5.content.importer.ImportConfigs;
-import com.ea.origin.cq5.content.importer.ImportDestination;
-import com.ea.origin.cq5.content.importer.ImportRuntimeException;
+import alvin.java.jcr.content.importer.ImportConfigs;
+import alvin.java.jcr.content.importer.ImportDestination;
+import alvin.java.jcr.content.importer.ImportRuntimeException;
+
 import com.google.gson.JsonObject;
 
 class JsonImportDestination implements ImportDestination, ImportConfigs {

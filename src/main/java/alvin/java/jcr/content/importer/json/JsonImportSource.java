@@ -1,4 +1,4 @@
-package com.ea.origin.cq5.content.importer.json;
+package alvin.java.jcr.content.importer.json;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,9 +6,10 @@ import java.io.InputStreamReader;
 
 import javax.jcr.Session;
 
-import com.ea.origin.cq5.content.importer.ImportDestination;
-import com.ea.origin.cq5.content.importer.ImportRuntimeException;
-import com.ea.origin.cq5.content.importer.ImportSource;
+import alvin.java.jcr.content.importer.ImportDestination;
+import alvin.java.jcr.content.importer.ImportRuntimeException;
+import alvin.java.jcr.content.importer.ImportSource;
+
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;

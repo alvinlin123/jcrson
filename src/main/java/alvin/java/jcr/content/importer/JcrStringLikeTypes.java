@@ -1,4 +1,4 @@
-package com.ea.origin.cq5.content.importer;
+package alvin.java.jcr.content.importer;
 
 public enum JcrStringLikeTypes {
 	

@@ -1,9 +1,9 @@
-package com.ea.origin.cq5.content.importer.json;
+package alvin.java.jcr.content.importer.json;
 
 import java.io.InputStream;
 
-import com.ea.origin.cq5.content.importer.ImportSource;
-import com.ea.origin.cq5.content.importer.Importer;
+import alvin.java.jcr.content.importer.ImportSource;
+import alvin.java.jcr.content.importer.Importer;
 
 public class JsonImporter implements Importer {
 

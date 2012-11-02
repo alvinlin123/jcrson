@@ -1,4 +1,4 @@
-package com.ea.origin.cq5.content.importer.json;
+package alvin.java.jcr.content.importer.json;
 
 import static org.easymock.EasyMock.*;
 
@@ -12,6 +12,8 @@ import javax.jcr.Session;
 import javax.jcr.Value;
 
 import org.junit.Test;
+
+import alvin.java.jcr.content.importer.json.JsonImporter;
 
 public class JsonImportSourceTest {
 	
